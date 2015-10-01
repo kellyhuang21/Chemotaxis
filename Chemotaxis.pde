@@ -1,7 +1,7 @@
 /* @pjs preload="minion.png"; */
 /* @pjs preload="banana.png"; */
 PImage minion;
-PImage banana;
+PImage bananabunch;
 int x = 400;
 int y = 400; 
 Bacteria [] colony;
@@ -10,7 +10,7 @@ void setup()
   size(800, 800);
   frameRate(40);
   minion =loadImage("minion.png");
-  banana =loadImage("banana.png");
+  bananabunch =loadImage("banana.png");
   colony = new Bacteria [50];
   for (int i = 0; i<colony.length; i++) {
     colony[i] = new Bacteria(200, 200);
@@ -23,7 +23,7 @@ void draw()
     colony[i].move();
     colony[i].show();
     if(mousePressed !=true){
-    banana();
+       banana();
     }
   }
 }
@@ -31,8 +31,8 @@ void draw()
 void banana() {
   {
     fill(255);
-    banana.resize(45, 30);
-    image(banana, mouseX, mouseY);
+    bananabunch.resize(45, 30);
+    image(bananabunch, mouseX, mouseY);
   }
 }
   class Bacteria 
